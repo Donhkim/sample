@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1810" systemVersion="11E53" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="SMNote" representedClassName="SMNote" syncable="YES">
+        <attribute name="noteContent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noteTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SMTag" inverseName="notes" inverseEntity="SMTag" syncable="YES"/>
+    </entity>
+    <entity name="SMTag" representedClassName="SMTag" syncable="YES">
+        <attribute name="tagContent" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="notes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SMNote" inverseName="tags" inverseEntity="SMNote" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SMNote" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="SMTag" positionX="-63" positionY="27" width="128" height="75"/>
+    </elements>
+</model>
